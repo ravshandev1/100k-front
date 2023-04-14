@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { editProfile, getUserData } from "../../../store/user";
 import { useNavigate } from "react-router-dom";
 import EditProfile from "../../skeleton/editProfileSkeleton/editProfile";
+import {BASE_URL} from "../../../helper/api";
 
 const ChangeProfile = () => {
   const dispatch = useDispatch();
@@ -70,7 +71,7 @@ const ChangeProfile = () => {
     //     edit_list: formData,
     //   })
     // );
-    fetch(`https://malefashion.pythonanywhere.com/api/v1/users/${user_id}/`, {
+    fetch(`${BASE_URL}/users/${user_id}/`, {
       method: "PUT",
       headers: {
         accept: "application/json",

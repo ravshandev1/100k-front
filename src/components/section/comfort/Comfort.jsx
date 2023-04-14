@@ -13,7 +13,7 @@ const Comfort = () => {
   return (
     <div className={styles.comfort}>
       <Container>
-        <h1 className={styles.comfort_title}>100k.uz qulaylikalari</h1>
+        <h1 className={styles.comfort_title}>Karol Vernulsa qulaylikalari</h1>
         <div className={styles.comfort_menu}>
           <div className={styles.comfort_menu_card}>
             <div className={styles.comfort_menu_card_img}>

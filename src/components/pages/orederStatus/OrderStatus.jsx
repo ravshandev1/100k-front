@@ -10,13 +10,13 @@ const OrderStatus = () => {
   const [first, setFirst] = useState();
   const getOrder = async (id) => {
     setUseId(id);
-    const res = await fetch(`${BASE_URL}orders/status/${id}/`);
+    const res = await fetch(`${BASE_URL}/orders/status/${id}/`);
     const data = await res.json();
     setFirst(data);
   };
   const putchOrder = async (option) => {
     axios
-      .patch(`${BASE_URL}orders/status/${useId}/`, {
+      .patch(`${BASE_URL}/orders/status/${useId}/`, {
         status: option,
       })
       .then((res) => {

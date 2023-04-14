@@ -5,6 +5,7 @@ import {useParams} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {startLoading, stopLoading} from "../../../store/isLoading";
 import styles from "./CategoryParams.module.scss"
+import {BASE_URL} from "../../../helper/api";
 
 const CategoryParams = () => {
 	const {cat_params} = useParams()
@@ -16,7 +17,7 @@ const CategoryParams = () => {
 		dispatch(startLoading())
 		try {
 			const res = await fetch(
-				`https://malefashion.pythonanywhere.com/api/v1/products/?cat=${name}`,
+				`${BASE_URL}/products/?cat=${name}`,
 				{
 					method: 'GET',
 					headers: {

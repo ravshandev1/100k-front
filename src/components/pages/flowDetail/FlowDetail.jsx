@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-
 import Container from '../../ui/container/Container'
 import Star from '../../ui/star/Star'
 import InputMain from '../../ui/input/InputMain'
@@ -14,11 +13,10 @@ import ModalDetailOrder from '../../modal/modalDetailOrder/ModalDetailOrder'
 import UserRate from '../../ui/userRate/UserRate'
 import BasicTabs from '../navTabs/NavTabs'
 import Carousel from '../../section/carousel/Carousel'
-
 import { getProductDetail } from '../../../store/detail'
-
 import styles from './FlowDetail.module.scss'
 import { Typography } from '@mui/material'
+import {BASE_URL} from "../../../helper/api";
 
 const FlowDetail = () => {
   const { stream_id, product_id } = useParams()
@@ -39,7 +37,7 @@ const FlowDetail = () => {
   const Order = async order_data => {
     try {
       const res = await fetch(
-        `https://malefashion.pythonanywhere.com/api/v1/orders/create/?${stream_id}`,
+        `${BASE_URL}/orders/create/?${stream_id}`,
         {
           method: 'POST',
           headers: {

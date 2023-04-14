@@ -18,7 +18,7 @@ const ModalDetailComment = ({active, setActive}) => {
 
 	const feedBack = async () => {
 		try {
-			const res = await fetch(`${BASE_URL}products/rate/`, {
+			const res = await fetch(`${BASE_URL}/products/rate/`, {
 				method: 'POST',
 				headers: {
 					'Accept': 'application/json',

@@ -3,10 +3,8 @@ import Container from '../../ui/container/Container'
 import Category from '../../ui/category/Category'
 import Comfort from '../../section/comfort/Comfort'
 import CardProduct from "../../ui/cardProduct/CardProduct";
-
 import {useDispatch, useSelector} from "react-redux";
 import {customLoading, startLoading, stopLoading} from "../../../store/isLoading";
-
 import {getCategory} from "../../../store/category";
 import styles from './Home.module.scss'
 import CategorySkeleton from "../../skeleton/categorySkeleton/CategorySkeleton";
@@ -14,7 +12,6 @@ import {BASE_URL} from "../../../helper/api";
 import ProductSkeleton from "../../skeleton/productSkeleton/ProductSkeleton";
 import GridProducts from "../../ui/gridProducts/GridProducts";
 import {useNavigate} from "react-router-dom";
-
 
 function Home(props) {
 	const {items, loading} = useSelector(state => state.category)
@@ -27,7 +24,7 @@ function Home(props) {
 		dispatch(startLoading())
 		try {
 			const res = await fetch(
-				`${BASE_URL}/api/v1/products/`,
+				`${BASE_URL}/products/`,
 				{
 					method: 'GET',
 					headers: {
@@ -52,7 +49,7 @@ function Home(props) {
 	const for_all = async () => {
 		dispatch(startLoading())
 		try {
-			const res = await fetch(`${BASE_URL}products/ommabop/`, {
+			const res = await fetch(`${BASE_URL}/products/ommabop/`, {
 				method: 'GET',
 				headers: {
 					'accept': ' application/json',

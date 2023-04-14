@@ -15,7 +15,7 @@ const Market = () => {
 
 	const getAllAdminProducts = async () => {
 		try {
-			const res = await fetch(`${BASE_URL}/api/v1/products/admin/`, {
+			const res = await fetch(`${BASE_URL}/products/admin/`, {
 				headers: {
 					accept: 'application/json',
 					'Content-type': 'application/json',

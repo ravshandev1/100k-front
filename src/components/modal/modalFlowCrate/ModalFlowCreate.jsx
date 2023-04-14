@@ -13,7 +13,7 @@ const ModalFlowCreate = (props) => {
 
 	const createFlow = async () => {
 		try {
-			const res = await fetch(`${BASE_URL}/api/v1/orders/stream/`, {
+			const res = await fetch(`${BASE_URL}/orders/stream/`, {
 				method: 'POST',
 				headers: {
 					'Accept': 'application/json',

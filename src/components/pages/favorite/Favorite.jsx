@@ -18,7 +18,7 @@ function Favorite(props) {
 	const wishlist = async () => {
 		startLoading()
 		try {
-			const res = await fetch(`${BASE_URL}/api/v1/products/my-wishlist/`, {
+			const res = await fetch(`${BASE_URL}/products/my-wishlist/`, {
 				method: "GET",
 				headers: {
 					'accept': 'application/json',

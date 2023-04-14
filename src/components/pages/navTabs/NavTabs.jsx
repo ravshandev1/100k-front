@@ -4,7 +4,6 @@ import styles from './NavTabs.module.scss'
 import Button from "../../ui/button/Button";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faComments} from "@fortawesome/free-solid-svg-icons";
-
 import ModalDetailComment from "../../modal/modalDetailComment/ModalDetailComment";
 
 function TabPanel(props) {

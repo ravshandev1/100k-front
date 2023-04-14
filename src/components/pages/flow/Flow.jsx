@@ -15,7 +15,7 @@ const Flow = () => {
 
 	const getFlow = async () => {
 		try {
-			const res = await fetch(`${BASE_URL}orders/stream/`, {
+			const res = await fetch(`${BASE_URL}/orders/stream/`, {
 				method: 'GET',
 				headers: {
 					'accept': 'application/json',
@@ -38,7 +38,7 @@ const Flow = () => {
 
 	const flowDelete = async (flow_id) => {
 		try {
-			const res = await fetch(`${BASE_URL}orders/stream/${flow_id}/`, {
+			const res = await fetch(`${BASE_URL}/orders/stream/${flow_id}/`, {
 				method: 'DELETE',
 				headers: {
 					'accept': 'application/json',

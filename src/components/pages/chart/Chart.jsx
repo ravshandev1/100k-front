@@ -3,6 +3,7 @@ import Container from "../../ui/container/Container";
 import styles from './Chart.module.scss'
 import DashboardNavbar from "../../section/dashboardNavbar/dashboardNavbar";
 import {useSelector} from "react-redux";
+import {BASE_URL} from "../../../helper/api";
 
 const Chart = () => {
 	const [flow, setFlow] = useState(null)
@@ -12,7 +13,7 @@ const Chart = () => {
 
 	const getChart = async () => {
 		try {
-			const res = await fetch(`https://malefashion.pythonanywhere.com/api/v1/orders/statistics/`, {
+			const res = await fetch(`${BASE_URL}/orders/statistics/`, {
 				method: 'GET',
 				headers: {
 					'accept': 'application/json',

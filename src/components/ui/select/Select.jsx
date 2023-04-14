@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import styles from "./Select.module.scss"
+import {BASE_URL} from "../../../helper/api";
 
 const Select = ({value, onChange, className}) => {
   const [city, setCity] = useState([])
 
   const getCity = async () => {
     try {
-      const res = await fetch(`https://malefashion.pythonanywhere.com/api/v1/orders/regions/`, {
+      const res = await fetch(`${BASE_URL}/orders/regions/`, {
         'accept': 'application/json',
         'X-CSRFToken': 'yDlVS6NhH1vo9uD9YDayJ3uMwl0FA9Xu7iYXaUFdIcF9SdE8r9A4iakaEmYAKfhK'
       })

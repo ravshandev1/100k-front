@@ -34,7 +34,7 @@ export const getUserData = createAsyncThunk(
   async function (user_id) {
     try {
       const res = await fetch(
-        `${BASE_URL}users/${user_id}/`,
+        `${BASE_URL}/users/${user_id}/`,
         {
           method: "GET",
         }
@@ -55,7 +55,7 @@ export const registration = createAsyncThunk(
   async function ({ register, isRejectedWithValue }) {
     try {
       const res = await fetch(
-        `${BASE_URL}users/register/`,
+        `${BASE_URL}/users/register/`,
         {
           method: "POST",
           headers: {
@@ -83,7 +83,7 @@ export const login = createAsyncThunk(
   async function ({ sign, isRejectedWithValue }) {
     try {
       const res = await fetch(
-        `${BASE_URL}users/login/`,
+        `${BASE_URL}/users/login/`,
         {
           method: "POST",
           headers: {
@@ -115,7 +115,7 @@ export const initialize = createAsyncThunk(
     }
     try {
       const res = await fetch(
-        `${BASE_URL}refresh/`,
+        `${BASE_URL}/refresh/`,
         {
           method: "POST",
           headers: {
@@ -143,7 +143,7 @@ export const editProfile = createAsyncThunk(
   async function ({ id, edit_list }, { isRejectedWithValue }) {
     try {
       const res = await fetch(
-        `${BASE_URL}users/${id}/`,
+        `${BASE_URL}/users/${id}/`,
         {
           method: "PUT",
           headers: {
@@ -171,7 +171,7 @@ export const deleteProfile = createAsyncThunk(
   async function (user_id, { isRejectedWithValue }) {
     try {
       const res = await fetch(
-        `${BASE_URL}users/${user_id}/`,
+        `${BASE_URL}/users/${user_id}/`,
         {
           method: "DELETE",
           headers: {
@@ -196,7 +196,7 @@ export const changePassword = createAsyncThunk(
   "user/changePassword",
   async function ({ token, change_form }, { isRejectedValue }) {
     try {
-      const res = await fetch(`${BASE_URL}users/change-password/`, {
+      const res = await fetch(`${BASE_URL}/users/change-password/`, {
         method: "POST",
         headers: {
           accept: "application/json",

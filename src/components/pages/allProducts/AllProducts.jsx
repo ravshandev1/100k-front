@@ -1,15 +1,13 @@
 import React, {useEffect, useState} from 'react';
-
 import Container from "../../ui/container/Container";
 import GridProducts from "../../ui/gridProducts/GridProducts";
 import CardProduct from "../../ui/cardProduct/CardProduct";
 import Button from "../../ui/button/Button";
-
 import {startLoading, stopLoading} from "../../../store/isLoading";
 import {useDispatch} from "react-redux";
 import {useNavigate} from "react-router-dom";
-
 import styles from './AllProducts.module.scss'
+import {BASE_URL} from "../../../helper/api";
 
 const AllProducts = () => {
 	const [products, setProducts] = useState([])
@@ -18,7 +16,7 @@ const AllProducts = () => {
 	const navigate = useNavigate()
 	const categories = async () => {
 		try {
-			const res = await fetch(`https://malefashion.pythonanywhere.com/api/v1/products/category/`, {
+			const res = await fetch(`${BASE_URL}/products/category/`, {
 				method: 'GET'
 			})
 
@@ -34,7 +32,7 @@ const AllProducts = () => {
 	const all_products = async () => {
 		dispatch(startLoading())
 		try {
-			const res = await fetch(`https://malefashion.pythonanywhere.com/api/v1/products/`, {
+			const res = await fetch(`${BASE_URL}/products/`, {
 				method: 'GET'
 			})
 			if (!res.ok) {
@@ -61,7 +59,7 @@ const AllProducts = () => {
 		dispatch(startLoading())
 		try {
 			const res = await fetch(
-				`https://malefashion.pythonanywhere.com/api/v1/products/?cat=${name}`,
+				`${BASE_URL}/products/?cat=${name}`,
 				{
 					method: 'GET',
 					headers: {

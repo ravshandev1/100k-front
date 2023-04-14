@@ -6,7 +6,7 @@ export const getCategory = createAsyncThunk(
   async function () {
     try {
       const res = await fetch(
-        `${BASE_URL}products/category/`,
+        `${BASE_URL}/products/category/`,
         {
           method: "GET",
           headers: {

@@ -3,6 +3,7 @@ import Button from "../../ui/button/Button";
 import styles from './CategoryList.module.scss'
 import {startLoading, stopLoading} from "../../../store/isLoading";
 import {useDispatch} from "react-redux";
+import {BASE_URL} from "../../../helper/api";
 
 const CategoryList = ({sort}) => {
 
@@ -11,7 +12,7 @@ const CategoryList = ({sort}) => {
 
 	const categories = async () => {
 		try {
-			const res = await fetch(`https://malefashion.pythonanywhere.com/api/v1/products/category/`, {
+			const res = await fetch(`${BASE_URL}/products/category/`, {
 				method: 'GET'
 			})
 

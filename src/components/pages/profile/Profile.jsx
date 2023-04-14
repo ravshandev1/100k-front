@@ -18,6 +18,7 @@ import {useNavigate} from "react-router-dom";
 import {startLoading, stopLoading} from "../../../store/isLoading";
 import ModalProfileDelete from "../../modal/modalProfileDelete/ModalProfileDelete";
 import {getUserData} from "../../../store/user";
+import {BASE_URL} from "../../../helper/api";
 
 const Profile = () => {
 	const {user} = useSelector(state => state.user)
@@ -31,7 +32,7 @@ const Profile = () => {
 	const getProfile = async () => {
 		dispatch(startLoading())
 		try {
-			const res = await fetch(`https://malefashion.pythonanywhere.com/api/v1/users/${user_id}/`, {
+			const res = await fetch(`${BASE_URL}/users/${user_id}/`, {
 				method: 'GET',
 			})
 			if (!res.ok) {

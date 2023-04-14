@@ -16,7 +16,7 @@ const Order = () => {
   const orders = async () => {
     startLoading();
     try {
-      const res = await fetch(`${BASE_URL}orders/list/`, {
+      const res = await fetch(`${BASE_URL}/orders/list/`, {
         method: "GET",
         headers: {
           accept: "application/json",

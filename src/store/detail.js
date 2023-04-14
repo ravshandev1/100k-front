@@ -6,7 +6,7 @@ export const getProductDetail = createAsyncThunk(
 	async (product) => {
 		try {
 			const res = await fetch(
-				`${BASE_URL}products/${product}/`,
+				`${BASE_URL}/products/${product}/`,
 				{
 					accept: 'application/json',
 					'X-CSRFToken':
