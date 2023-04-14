@@ -1,0 +1,15 @@
+.layout_navbar__footer {
+  display: none !important;
+}
+
+@media (max-width: 754px) {
+  .layout_navbar__footer {
+    display: flex !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+  }
+}
+
+/*# sourceMappingURL=MainLayout.module.css.map */

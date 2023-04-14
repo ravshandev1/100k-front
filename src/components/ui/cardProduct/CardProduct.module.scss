@@ -1,0 +1,147 @@
+.card {
+  width: 220px;
+  border-radius: 12px;
+  padding: 14px;
+  background-color: var(--light-white-main);
+
+  &_max {
+    width: 100%;
+  }
+
+  &_body {
+    &_link {
+      color: var(--light-black-main);
+    }
+
+    &_img {
+      width: 100%;
+      height: 230px;
+      overflow: hidden;
+      border-radius: 12px;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &_name {
+      width: 150px;
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 500;
+      height: 17px;
+      overflow: hidden;
+      margin: 15px 0 5px 0;
+      color: var(--light-white-black);
+    }
+
+    &_price {
+      font-size: 16px;
+      font-weight: 700;
+
+      & > span {
+        font-size: 80%;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &_link {
+    color: var(--light-black-main);
+  }
+}
+
+@media (max-width: 712px) {
+  .card {
+
+    padding: 8px;
+    background-color: var(--light-white-main);
+
+    &_body {
+
+      &_img {
+        height: 190px;
+      }
+
+      &_name {
+        font-size: 15px;
+        line-height: 16px;
+        font-weight: 500;
+        height: 17px;
+        overflow: hidden;
+        margin: 15px 0 5px 0;
+        text-transform: capitalize;
+      }
+
+      &_price {
+        font-size: 13px;
+        font-weight: 600;
+
+        & > span {
+          font-size: 80%;
+          font-weight: 400;
+        }
+      }
+    }
+
+    &_link {
+      color: var(--light-black-main);
+    }
+  }
+}
+
+//@media (max-width: 526px) {
+//  .card {
+//
+//    padding: 8px;
+//    background-color: var(--light-white-main);
+//
+//    &_body {
+//
+//      &_img {
+//        height: 170px;
+//      }
+//
+//      &_price {
+//        font-size: 13px;
+//        font-weight: 600;
+//
+//        & > span {
+//          font-size: 80%;
+//          font-weight: 400;
+//        }
+//      }
+//    }
+//
+//  }
+//}
+
+
+
+@media (max-width: 452px) {
+  .card {
+
+    padding: 8px;
+    background-color: var(--light-white-main);
+
+    &_body {
+
+      &_img {
+        height: 150px;
+      }
+
+      &_price {
+        font-size: 13px;
+        font-weight: 600;
+
+        & > span {
+          font-size: 80%;
+          font-weight: 400;
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,37 @@
+.wallet {
+  width: 100%;
+  background-color: var(--light-gray-main);
+  border-radius: 12px;
+  padding: 12px;
+
+  &_header {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: var(--light-gray-l20);
+
+    & > h4 {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  &_body {
+    background-color: var(--light-gray-l20);
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 12px 0 0 0;
+  }
+
+  &_items:not(:last-child) {
+    margin: 0 0 8px 0;
+  }
+
+  &_items {
+    & > span {
+      color: var(--light-red-main);
+      font-weight: 500;
+      font-size: 18px;
+      margin: 0 0 0 5px;
+    }
+  }
+}

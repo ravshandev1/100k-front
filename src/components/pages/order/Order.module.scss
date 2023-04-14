@@ -1,0 +1,41 @@
+.order {
+  background-color: var(--light-gray-l20);
+
+  &_body {
+    padding: 36px 0;
+  }
+
+  &_products_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 12px;
+    grid-row-gap: 16px;
+  }
+
+  &_no_products {
+    margin: 24px 0 0 0;
+    & > p {
+      margin: 6px 0 0 0;
+    }
+    a {
+      color: var(--light-red-main);
+      font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 756px) {
+  .order {
+    background-color: var(--light-gray-l20);
+
+    &_body > h1 {
+      font-size: 30px;
+    }
+
+    &_products_container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 10px;
+    }
+  }
+}

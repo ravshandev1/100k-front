@@ -1,0 +1,21 @@
+.carousel {
+  max-height: 376px;
+  height: 100%;
+
+  & > div {
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center !important;
+
+    & > button {
+      width: 12px;
+      height: 12px;
+      background-color: var(--light-red-main) !important;
+      border-radius: 50%;
+      text-align: center;
+      &:not(:last-child ){
+      margin: 0 8px 0 0;
+      }
+    }
+  }
+}

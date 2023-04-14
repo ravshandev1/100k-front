@@ -1,0 +1,32 @@
+.all_products {
+  background-color: var(--light-gray-l20);
+  padding: 40px 0 ;
+
+
+  &_sort {
+    overflow: auto;
+    display: flex;
+    margin: 0 0 20px 0;
+
+    &_btn:not(:last-child) {
+      margin: 0 8px 0 0;
+    }
+  }
+
+  &_service {
+   & > h2 {
+     width: 100%;
+   }
+
+
+    & > p {
+      font-size: 18px;
+
+      & > span {
+        color: var(--light-red-main);
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+  }
+}

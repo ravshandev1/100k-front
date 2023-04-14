@@ -1,0 +1,22 @@
+.label {
+  max-width: 237px;
+  width: 100%;
+  height: 48px;
+  background-color: var(--light-red-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-white-main);
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 12px;
+  padding: 10px 5px;
+
+  & > svg {
+    margin: 0 5px 0 0 ;
+  }
+}
+
+.input[type=file] {
+  display: none;
+}

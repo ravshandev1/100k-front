@@ -1,0 +1,13 @@
+html:root {
+  --light-red-main: rgb(256, 0, 6);
+  --light-black-main: rgb(27, 27, 27);
+  --light-white-main: rgb(255, 255, 255);
+  --light-gray-main: #ebebeb;
+  --light-gray-l20: rgb(244, 244, 244);
+  --light-green-main: rgb(75 181 67);
+}
+
+body {
+  color: var(--light-black-main);
+  background-color: var(--light-white-main);
+}

@@ -1,0 +1,31 @@
+.chart {
+  background-color: var(--light-gray-l20);
+
+  &_body {
+    padding: 70px 0;
+
+    & > h1 {
+      margin: 0 0 12px 0;
+    }
+  }
+
+  &_table_container {
+    overflow: auto;
+
+    & > table {
+      min-width: 1000px;
+      border-collapse: collapse;
+      background-color: var(--light-white-main);
+
+      th, td {
+        border: 1px solid var(--light-red-main);
+        padding: 6px 12px;
+        transition: 150ms linear;
+
+        &:hover {
+          background-color: var(--light-gray-main);
+        }
+      }
+    }
+  }
+}

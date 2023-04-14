@@ -1,0 +1,33 @@
+.rate {
+  display: flex;
+
+  &_btn:not(:last-child) {
+    margin: 0 10px 0 0;
+  }
+
+  &_btn {
+    width: 46px;
+    height: 46px;
+    border: 3px solid var(--light-red-main);
+    border-radius: 12px;
+    background-color: var(--light-white-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.active {
+      border: none;
+      background-color: var(--light-red-main);
+
+      .rate_icon {
+        color: var(--light-white-main);
+      }
+    }
+  }
+
+  &_icon {
+    width: 55%;
+    height: 55%;
+    color: var(--light-red-main);
+  }
+}

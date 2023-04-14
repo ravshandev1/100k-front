@@ -1,0 +1,35 @@
+.support {
+  padding: 120px 0;
+  background-color: var(--light-gray-l20);
+
+  &_body {
+    background-color: var(--light-white-main);
+    padding: 20px 25px;
+    border-radius: 12px;
+  }
+
+  &_title {
+    font-weight: 500;
+    margin:  0 0 6px 0;
+  }
+
+  &_call__center, &_email, &_telegram {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  &_call__center, &_email, &_telegram {
+    & > span {
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+
+  &_telegram {
+    & > span {
+      color: var(--light-red-main);
+      cursor: pointer;
+    }
+  }
+
+}

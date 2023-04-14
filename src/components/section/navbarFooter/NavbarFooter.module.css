@@ -1,0 +1,17 @@
+.navbar {
+  width: 100%;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  background-color: var(--light-white-main);
+}
+.navbar_menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar_menu_link {
+  color: red;
+}
+
+/*# sourceMappingURL=NavbarFooter.module.css.map */

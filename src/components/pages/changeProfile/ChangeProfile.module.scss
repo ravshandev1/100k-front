@@ -1,0 +1,97 @@
+.change__profile {
+  background-color: var(--light-gray-main);
+  padding: 50px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &_user__image{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   cursor: pointer;
+    &_item{
+      display: none;
+    }
+    &:hover &_item{
+      display: block;
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: rgba(240, 241, 245,0.7);
+      border-radius: 50%;
+      label{
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+          }
+          input{
+            opacity: 0;
+            cursor: pointer;
+          }
+    }
+    img{
+          width: 80px;
+          height: 80px;
+          object-fit: cover;
+          border-radius: 50%;
+          position: relative;
+        }
+  }
+
+  & > h1 {
+    font-weight: 500;
+    margin: 0 0 12px 0;
+    text-align: center;
+  }
+
+  & > form {
+    max-width: 527px;
+    width: 100%;
+    background-color: var(--light-gray-l20);
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+
+  &_input:not(:first-child) {
+    margin: 8px 0 0 0;
+  }
+
+  &_btn {
+    margin: 12px 0 0 0 ;
+  }
+}
+
+@keyframes shake_odd {
+  0% {
+    transform: translateX(0)
+  }
+  25% {
+    transform: translateX(-4px)
+  }
+  75% {
+    transform: translateX(4px)
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
+
+
+@keyframes shake_even {
+  0% {
+    transform: translateX(0)
+  }
+  25% {
+    transform: translateX(4px)
+  }
+  75% {
+    transform: translateX(-4px)
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
